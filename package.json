@@ -1,22 +1,75 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^4.1.1"
-  }
+		"name": "Edirom",
+		"version": "1.0.0",
+		"description": "A minimal Electron application with EdiromOnline",
+		"main": "main.js",
+		"scripts": {
+				"start": "electron .",
+				"dist-all": "electron-builder -mw",
+				"dist-mac": "electron-builder --mac",
+				"dist-win": "electron-builder --win"
+		},
+		"author": "Max-Reger-Institut/Elsa-Reger-Stiftung, Reger-Werkausgabe, Karlsruhe",
+		"license": "GPL-3.0-only",
+		"dependencies": {
+				"about-window": "^1.12.1",
+				"jquery": "^2.2.4",
+				"raphael": "^2.1.0"
+		},
+		"devDependencies": {
+				"electron": "^4.1.1",
+				"electron-builder": "^20.40.2"
+		},
+		"build": {
+				"appId": "de.max-reger-institut.edirom",
+				"productName": "Edirom App",
+				"asar": "true",
+				"mac": {
+						"extraResources": [
+								{
+										"from": "build/jre/macOS",
+										"to": "jre",
+										"filter": [
+												"**/*"
+										]
+								},
+								{
+										"from": "build/scripts/macOS",
+										"to": "scripts",
+										"filter": [
+												"**/*"
+										]
+								}
+						],
+						"category": "public.app-category.music",
+						"target": "dmg"
+				},
+				"win": {
+						"extraResources": [
+								{
+										"from": "build/jre/win-x64",
+										"to": "jre",
+										"filter": [
+												"**/*"
+										]
+								},
+								{
+										"from": "build/scripts/win-x64",
+										"to": "scripts",
+										"filter": [
+												"**/*"
+										]
+								}
+						],
+						"target": "nsis-web"
+				},
+				"nsisWeb": {
+						"warningsAsErrors": false,
+						"oneClick": false,
+						"perMachine": true,
+						"allowToChangeInstallationDirectory": true,
+						"runAfterFinish": false,
+						"appPackageUrl": "https://www.max-reger-institut.de"
+				}
+		}
 }

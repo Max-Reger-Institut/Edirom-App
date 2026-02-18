@@ -1,0 +1,91 @@
+body{
+    font-size: 0.9em;
+    padding:20px;
+    font-family: Arial,sans-serif;
+    background-color: rgba(245, 235, 210, 0.75);
+}
+
+h1 {
+	color: DimGray;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(146, 64, 92);
+}
+
+a:hover {
+	text-decoration: underline;
+	color: rgb(146, 64, 92);
+}
+
+ul{
+    margin-left:10px;
+    margin-bottom:10px;
+}
+table{
+    margin-left:0;
+    margin-bottom:10px;
+}
+table
+h1,
+h2,
+h3,
+h4{
+	color:DimGray;
+	font-weight: normal;
+/*     margin-left:-10px; */
+}
+h3{
+    margin-top:20px;
+}
+h4{
+    margin-top:10px;
+    clear:both;
+}
+p,
+dl{
+    margin-bottom:10px;
+}
+tr.label td{
+    background-color:#e5e5e5;
+}
+img{
+    max-width:100%;
+}
+dt{
+}
+dd{
+    margin-bottom:12px;
+}
+.term{
+    font-weight:bold;
+}
+.figure{
+    display:block;
+    clear:both;
+    margin-bottom:12px;
+}
+.figure div.table{
+    margin-bottom:0em !important;
+}
+.figure + *{
+    display:block;
+    clear:both;
+}
+.figure img{
+    float:left;
+    margin-right:6px;
+    margin-bottom:6px;
+}
+/*.figure img:nth-child(n+2){
+margin-left:10px;
+}*/
+.figure .p{
+    display:block;
+}
+.figure .caption{
+    display:block;
+    clear:both;
+}
